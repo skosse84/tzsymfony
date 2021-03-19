@@ -1,0 +1,12 @@
+{% extends 'main.html.twig' %}
+{% block body %}
+    {{data}}
+    <h1 class="text-center mb-4">Товар добавлен!</h1>
+    <form method="get" action="/new">
+        <input type="hidden" name="name" value="{{ data.name }}">
+        <input type="hidden" name="descr" value="{{ data.description }}">
+        <button type="submit" class="btn btn-success  w-100">
+            OK
+        </button>
+    </form>
+{% endblock %}

@@ -39,6 +39,17 @@ function setError(errMess, e){
         file.classList.remove("is-valid");
     }
     file.classList.add("is-invalid");
+
+    let tooltip = document.querySelector(".invalid-tooltip");
+    if(tooltip){
+        tooltip.innerHTML = errMess;
+    }else{
+        tooltip = document.createElement("div");
+        tooltip.classList.add('invalid-tooltip');
+        tooltip.innerHTML = errMess;
+        file.insertAdjacentElement('afterend', tooltip);
+    }
+
     if(e){
         e.preventDefault();
     }

@@ -1,7 +1,10 @@
 {% extends 'main.html.twig' %}
 {% block body %}
-{{ form_start(form) }}
-{{ form_widget(form) }}
-{{ form_end(form) }}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+    <div>
+        <span class="error" aria-live="polite"></span>
+    </div>
     <script src="{{ asset('js/validation.js') }}"></script>
 {% endblock %}
